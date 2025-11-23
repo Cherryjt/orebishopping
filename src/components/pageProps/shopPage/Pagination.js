@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // *** เพิ่ม useEffect
 import ReactPaginate from "react-paginate";
 import Product from "../../home/Products/Product";
-import { paginationItems } from "../../../constants";
+// ลบการ Import และการประกาศ Array items แบบค่าคงที่ออก
+// import { paginationItems } from "../../../constants";
+// const items = paginationItems;
 
-const items = paginationItems;
 function Items({ currentItems }) {
   return (
     <>
@@ -25,27 +26,35 @@ function Items({ currentItems }) {
   );
 }
 
-const Pagination = ({ itemsPerPage }) => {
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
+// *** รับ props: itemsPerPage และ productsData (ข้อมูลที่ถูกกรองแล้ว) ***
+const Pagination = ({ itemsPerPage, productsData }) => {
+
+  // ใช้ productsData เป็นฐานข้อมูลหลักสำหรับการแบ่งหน้า
+  const items = productsData;
+
   const [itemOffset, setItemOffset] = useState(0);
   const [itemStart, setItemStart] = useState(1);
 
+  // *** Logic 1: รีเซ็ต Pagination เมื่อข้อมูล (Search/Filter) เปลี่ยน ***
+  useEffect(() => {
+    // เมื่อ filteredProducts (productsData) เปลี่ยน ให้กลับไปที่หน้าแรก
+    setItemOffset(0);
+    setItemStart(1);
+    // สิ่งนี้จะช่วยแก้ปัญหาการแสดงผลผิดพลาดหลัง Search
+  }, [productsData]);
+
+
   // Simulate fetching items from another resources.
-  // (This could be items from props; or items loaded in a local state
-  // from an API endpoint with useEffect and useState)
+  // ใช้ items.length ที่เป็นข้อมูลที่ถูกกรองแล้ว
   const endOffset = itemOffset + itemsPerPage;
-  //   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
+    // ใช้ items.length ที่เป็นข้อมูลที่ถูกกรองแล้ว
     const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
-    // console.log(
-    //   `User requested page number ${event.selected}, which is offset ${newOffset},`
-    // );
     setItemStart(newOffset);
   };
 
@@ -54,25 +63,34 @@ const Pagination = ({ itemsPerPage }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 mdl:gap-4 lg:gap-10">
         <Items currentItems={currentItems} />
       </div>
-      <div className="flex flex-col mdl:flex-row justify-center mdl:justify-between items-center">
-        <ReactPaginate
-          nextLabel=""
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={3}
-          marginPagesDisplayed={2}
-          pageCount={pageCount}
-          previousLabel=""
-          pageLinkClassName="w-9 h-9 border-[1px] border-lightColor hover:border-gray-500 duration-300 flex justify-center items-center"
-          pageClassName="mr-6"
-          containerClassName="flex text-base font-semibold font-titleFont py-10"
-          activeClassName="bg-black text-white"
-        />
 
-        <p className="text-base font-normal text-lightText">
-          Products from {itemStart === 0 ? 1 : itemStart} to {endOffset} of{" "}
-          {items.length}
-        </p>
-      </div>
+      {/* *** Logic 2: แสดงข้อความ "ไม่พบสินค้า" และซ่อน Pagination Control *** */}
+      {items.length === 0 ? (
+          <p data-testid="no-results-message" className="col-span-full text-center text-xl text-red-500 py-10">
+              ไม่พบสินค้าที่คุณค้นหา
+          </p>
+      ) : (
+        <div className="flex flex-col mdl:flex-row justify-center mdl:justify-between items-center">
+          <ReactPaginate
+            nextLabel=""
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={3}
+            marginPagesDisplayed={2}
+            pageCount={pageCount}
+            previousLabel=""
+            pageLinkClassName="w-9 h-9 border-[1px] border-lightColor hover:border-gray-500 duration-300 flex justify-center items-center"
+            pageClassName="mr-6"
+            containerClassName="flex text-base font-semibold font-titleFont py-10"
+            activeClassName="bg-black text-white"
+            forcePage={Math.floor(itemOffset / itemsPerPage)} // ทำให้ Pagination แสดงหน้าที่ถูกต้องหลัง Search
+          />
+
+          <p className="text-base font-normal text-lightText">
+            Products from {itemStart === 0 ? 1 : itemStart} to {endOffset} of{" "}
+            {items.length}
+          </p>
+        </div>
+      )}
     </div>
   );
 };
