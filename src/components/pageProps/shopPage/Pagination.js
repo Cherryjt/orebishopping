@@ -64,10 +64,9 @@ const Pagination = ({ itemsPerPage, productsData }) => {
         <Items currentItems={currentItems} />
       </div>
 
-      {/* *** Logic 2: แสดงข้อความ "ไม่พบสินค้า" และซ่อน Pagination Control *** */}
       {items.length === 0 ? (
           <p data-testid="no-results-message" className="col-span-full text-center text-xl text-red-500 py-10">
-              ไม่พบสินค้าที่คุณค้นหา
+              The product you are looking for was not found.
           </p>
       ) : (
         <div className="flex flex-col mdl:flex-row justify-center mdl:justify-between items-center">

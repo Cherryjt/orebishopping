@@ -78,12 +78,10 @@ export const SplOfferData = [
     price: "220.00",
     color: "Black",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
 ];
-// =================== Special Offer data End here ==============
-
-// =================== PaginationItems Start here ===============
 
 export const paginationItems = [
   {
@@ -93,6 +91,8 @@ export const paginationItems = [
     price: "35.00",
     color: "Blank and White",
     badge: true,
+    // *** 1. Cap + Accessories ***
+    category: ["cap", "accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -102,6 +102,8 @@ export const paginationItems = [
     price: "180.00",
     color: "Gray",
     badge: true,
+    // *** 2. สินค้าใหม่ (ไม่มีหมวดหมู่ย่อยอื่นที่เกี่ยวข้อง) ***
+    category: ["new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -111,6 +113,8 @@ export const paginationItems = [
     price: "25.00",
     color: "Mixed",
     badge: true,
+    // *** 3. Gadgets + Electronics ***
+    category: ["gadgets", "electronics"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -120,6 +124,8 @@ export const paginationItems = [
     price: "220.00",
     color: "Black",
     badge: true,
+    // *** 4. Accessories ***
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -129,6 +135,8 @@ export const paginationItems = [
     price: "35.00",
     color: "Blank and White",
     badge: true,
+    // *** 5. New Arrivals + Accessories ***
+    category: ["new arrivals", "accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -138,6 +146,7 @@ export const paginationItems = [
     price: "180.00",
     color: "Gray",
     badge: false,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -147,6 +156,7 @@ export const paginationItems = [
     price: "25.00",
     color: "Mixed",
     badge: true,
+    category: ["accessories", "gadgets"], // เพิ่ม Gadgets
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -156,6 +166,7 @@ export const paginationItems = [
     price: "220.00",
     color: "Black",
     badge: false,
+    category: ["accessories", "new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -165,6 +176,7 @@ export const paginationItems = [
     price: "44.00",
     color: "Black",
     badge: true,
+    category: ["electronics", "gadgets"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -174,6 +186,7 @@ export const paginationItems = [
     price: "250.00",
     color: "Black",
     badge: true,
+    category: ["electronics", "gadgets"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -183,6 +196,7 @@ export const paginationItems = [
     price: "80.00",
     color: "Mixed",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -192,6 +206,7 @@ export const paginationItems = [
     price: "60.00",
     color: "Mixed",
     badge: false,
+    category: ["new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -201,6 +216,7 @@ export const paginationItems = [
     price: "60.00",
     color: "Mixed",
     badge: false,
+    category: ["new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
 
@@ -211,6 +227,7 @@ export const paginationItems = [
     price: "250.00",
     color: "Black",
     badge: true,
+    category: ["electronics", "gadgets"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -220,6 +237,7 @@ export const paginationItems = [
     price: "60.00",
     color: "Mixed",
     badge: false,
+    category: ["new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -229,6 +247,7 @@ export const paginationItems = [
     price: "250.00",
     color: "Black",
     badge: true,
+    category: ["electronics", "gadgets"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -238,6 +257,7 @@ export const paginationItems = [
     price: "220.00",
     color: "Black",
     badge: false,
+    category: ["accessories", "new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -247,6 +267,7 @@ export const paginationItems = [
     price: "44.00",
     color: "Black",
     badge: true,
+    category: ["gadgets", "electronics"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -256,6 +277,7 @@ export const paginationItems = [
     price: "250.00",
     color: "Black",
     badge: true,
+    category: ["electronics", "gadgets"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -265,6 +287,7 @@ export const paginationItems = [
     price: "80.00",
     color: "Mixed",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -274,6 +297,7 @@ export const paginationItems = [
     price: "25.00",
     color: "Mixed",
     badge: true,
+    category: ["gadgets", "electronics"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -283,6 +307,7 @@ export const paginationItems = [
     price: "220.00",
     color: "Black",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -292,6 +317,7 @@ export const paginationItems = [
     price: "35.00",
     color: "Blank and White",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -301,6 +327,7 @@ export const paginationItems = [
     price: "35.00",
     color: "Blank and White",
     badge: true,
+    category: ["cap", "accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -310,6 +337,7 @@ export const paginationItems = [
     price: "180.00",
     color: "Gray",
     badge: true,
+    category: ["new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -319,6 +347,7 @@ export const paginationItems = [
     price: "25.00",
     color: "Mixed",
     badge: true,
+    category: ["gadgets", "electronics"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -328,6 +357,7 @@ export const paginationItems = [
     price: "220.00",
     color: "Black",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -337,6 +367,7 @@ export const paginationItems = [
     price: "35.00",
     color: "Blank and White",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -346,6 +377,7 @@ export const paginationItems = [
     price: "180.00",
     color: "Gray",
     badge: false,
+    category: ["accessories", "new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -355,6 +387,7 @@ export const paginationItems = [
     price: "25.00",
     color: "Mixed",
     badge: true,
+    category: ["electronics", "gadgets"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -364,6 +397,7 @@ export const paginationItems = [
     price: "220.00",
     color: "Black",
     badge: false,
+    category: ["accessories", "new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -373,6 +407,7 @@ export const paginationItems = [
     price: "44.00",
     color: "Black",
     badge: true,
+    category: ["gadgets", "electronics"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -382,6 +417,7 @@ export const paginationItems = [
     price: "250.00",
     color: "Black",
     badge: true,
+    category: ["electronics", "gadgets"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -391,6 +427,7 @@ export const paginationItems = [
     price: "80.00",
     color: "Mixed",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -400,6 +437,7 @@ export const paginationItems = [
     price: "60.00",
     color: "Mixed",
     badge: false,
+    category: ["new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -409,6 +447,7 @@ export const paginationItems = [
     price: "60.00",
     color: "Mixed",
     badge: false,
+    category: ["new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -418,6 +457,7 @@ export const paginationItems = [
     price: "60.00",
     color: "Mixed",
     badge: false,
+    category: ["new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -427,6 +467,7 @@ export const paginationItems = [
     price: "250.00",
     color: "Black",
     badge: true,
+    category: ["electronics", "gadgets"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -436,6 +477,7 @@ export const paginationItems = [
     price: "220.00",
     color: "Black",
     badge: false,
+    category: ["accessories", "new arrivals"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -445,6 +487,7 @@ export const paginationItems = [
     price: "44.00",
     color: "Black",
     badge: true,
+    category: ["gadgets", "electronics"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -454,6 +497,7 @@ export const paginationItems = [
     price: "250.00",
     color: "Black",
     badge: true,
+    category: ["electronics", "gadgets"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -463,6 +507,7 @@ export const paginationItems = [
     price: "80.00",
     color: "Mixed",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -472,6 +517,7 @@ export const paginationItems = [
     price: "25.00",
     color: "Mixed",
     badge: true,
+    category: ["gadgets", "electronics"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -481,6 +527,7 @@ export const paginationItems = [
     price: "220.00",
     color: "Black",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -490,6 +537,7 @@ export const paginationItems = [
     price: "35.00",
     color: "Blank and White",
     badge: true,
+    category: ["accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
@@ -499,7 +547,7 @@ export const paginationItems = [
     price: "35.00",
     color: "Blank and White",
     badge: true,
+    category: ["cap", "accessories"],
     des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
 ];
-// =================== PaginationItems End here =================
